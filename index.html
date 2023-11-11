@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘모해</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+  </head>
+  <body>
+    <div class="todo-wrap">
+      <section class="top">
+        <div class="left">
+          <h2 class="time"></h2>
+          <p class="day"></p>
+          <div class="user">
+            <p></p>
+          </div>
+        </div>
+        <div class="right weather-wrap">
+          <i></i>
+          <p></p>
+        </div>
+      </section>
+      <section class="list-wrap hidden">
+        <form action="">
+          <input type="text" required placeholder="오늘의 할 일!" />
+        </form>
+        <div class="list">
+          <ul></ul>
+        </div>
+      </section>
+      <section class="login">
+        <p>안녕하세요! 이름이 뭐에요?</p>
+        <form action="">
+          <input required maxlength="15" type="text" />
+        </form>
+      </section>
+    </div>
+    <script src="./js/bg.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/greetings.js"></script>
+    <script src="./js/toDo.js"></script>
+    <script src="./js/weather.js"></script>
+  </body>
+</html>

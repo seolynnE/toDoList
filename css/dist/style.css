@@ -1,0 +1,223 @@
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/*Normalize*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+  color: #191919;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+em {
+  font-size: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  background-color: inherit;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input {
+  padding: 4px 8px;
+  background-color: inherit;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.698);
+}
+
+::-moz-selection {
+  background: #87b8ed;
+  color: #fff;
+}
+
+::selection {
+  background: #87b8ed;
+  color: #fff;
+}
+
+.todo-wrap {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.top h2 {
+  font-size: 40px;
+  line-height: 1;
+}
+.top p {
+  font-size: 18px;
+  line-height: 1;
+}
+.top .user {
+  padding-top: 4px;
+  margin-left: -200px;
+  transition: 0.8s;
+}
+.top .user.active {
+  margin-left: 0;
+}
+.top .right {
+  display: flex;
+  font-size: 12px;
+}
+.top .right p {
+  padding-left: 4px;
+  font-size: 12px;
+}
+
+.list-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 120px;
+  transition: opacity 1s ease-in-out;
+}
+.list-wrap p {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.list-wrap form {
+  width: 100%;
+}
+.list-wrap form input {
+  width: 100%;
+  font-size: 18px;
+}
+.list-wrap .list {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  padding: 18px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+.list-wrap .list::-webkit-scrollbar {
+  width: 4px;
+}
+.list-wrap .list::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #303030;
+}
+.list-wrap .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  height: fit-content;
+}
+.list-wrap .list ul li {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  width: calc(100% / 2 - 20px);
+  height: fit-content;
+  font-size: 14px;
+}
+.list-wrap .list ul p {
+  width: fit-content;
+  font-size: 14px;
+  word-break: break-all;
+}
+.list-wrap .list ul button {
+  width: 16px;
+  height: 18px;
+  margin-top: 4px;
+  background-image: url(../../img/trash.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  font-size: 28px;
+  font-weight: 500;
+  transition: opacity 0s ease-in-out;
+}
+.login input {
+  width: 320px;
+  font-size: 20px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .top h2 {
+    margin-bottom: 2px;
+    font-size: 36px;
+  }
+  .top p {
+    font-size: 14px;
+  }
+
+  .list-wrap {
+    margin-top: 60px;
+  }
+  .list-wrap .list ul li {
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .login {
+    font-size: 24px;
+  }
+  .login input {
+    width: 274px;
+  }
+}
